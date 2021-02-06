@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  form {
+    display: inline-flex;
+    flex-direction: column;
+
+    .form-control {
+      display: inline-flex;
+      flex-direction: column;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+
+  section.results {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+
+    table {
+      width: 30rem;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    td {
+      text-align: right;
+    }
+  }
+
+  .chart-container {
+    width: 30rem;
+  }
+}

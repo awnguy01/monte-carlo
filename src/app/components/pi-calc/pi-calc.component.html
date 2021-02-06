@@ -1,0 +1,36 @@
+<div class="container">
+    <form class="form">
+        <div class="form-control">
+            <label># of Trials</label>
+            <input type="number" [formControl]="trialsCtrl">
+        </div>
+        <div class="button-row">
+            <button type="button" (click)="reset()">Clear</button>
+            <button type="submit" (click)="runSim()">Calculate</button>
+        </div>
+    </form>
+</div>
+
+<section class="results">
+    <table>
+        <thead>
+            <tr>
+                <th>Test #</th>
+                <th>Trials</th>
+                <th>Hits</th>
+                <th>~Pi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let result of results; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ result.trials }}</td>
+                <td>{{ result.hits }}</td>
+                <td>{{ calcPi(result.hits, result.trials) }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="chart-container">
+        <canvas id="resultGraph"></canvas>
+    </div>
+</section>

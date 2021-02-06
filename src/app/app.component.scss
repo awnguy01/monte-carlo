@@ -1,0 +1,17 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: #fc4445;
+  height: 2rem;
+
+  span {
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+
+  .is-active {
+    font-weight: bold;
+  }
+}
